@@ -1,0 +1,20 @@
+{
+  "name": "monorepo-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "David Sljukic",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^6.0.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "scripts": {
+    "app1": "next services/app1 -p 4000",
+    "app1-build": "next build services/app1",
+    "app1-start": "next start services/app1 -p 4000",
+    "app2": "next services/app2 -p 4000",
+    "app2-build": "next build services/app2",
+    "app2-start": "next start services/app2 -p 4000"
+  }
+}
