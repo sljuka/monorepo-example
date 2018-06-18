@@ -1,15 +1,11 @@
 // This file is not going through babel transformation.
 // So, we write it in vanilla JS
 // (But you could use ES2015 features supported by your Node.js version)
-const path = require('path');
+const withTM = require('@weco/next-plugin-transpile-modules')
 
-module.exports = {
+const nextConfig = {
   webpack: (config, { buildId, dev, isServer, defaultLoaders }) => {
     // Perform customizations to webpack config
-    console.log('ASDF:::', __dirname);
-    config.resolve = {
-      modules: [path.resolve(__dirname, 'packages'), ...config.resolve.modules]
-    }
 
     // Important: return the modified config
     return config
@@ -19,5 +15,10 @@ module.exports = {
 
     // Important: return the modified config
     return config
-  }
+  },
 }
+
+// Use withTM until this issue resolves: https://github.com/zeit/next.js/issues/706
+// After that use 'transpileModules' as standard next.config property
+// ['example'] is regexp. This means that every package with name starting with 'example...' is transpiled
+module.exports = withTM({...nextConfig, transpileModules: ['example']})

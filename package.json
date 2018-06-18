@@ -4,11 +4,7 @@
   "main": "index.js",
   "author": "David Sljukic",
   "license": "MIT",
-  "dependencies": {
-    "next": "^6.0.3",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
-  },
+  "private": true,
   "scripts": {
     "app1": "next services/app1 -p 4000",
     "app1-build": "next build services/app1",
@@ -16,5 +12,18 @@
     "app2": "next services/app2 -p 4000",
     "app2-build": "next build services/app2",
     "app2-start": "next start services/app2 -p 4000"
+  },
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-loader": "^7.1.4"
+  },
+  "dependencies": {
+    "@weco/next-plugin-transpile-modules": "^0.0.2"
   }
 }

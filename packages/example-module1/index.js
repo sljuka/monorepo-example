@@ -1,3 +1,10 @@
 import React from 'react';
+import Component2 from 'example-module2';
 
-export default () => <p>test monorepo</p>;
+const Example = () =>
+  <div>
+    <p>test monorepo (example 1)</p>
+    <Component2 />
+  </div>
+
+export default Example;
