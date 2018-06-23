@@ -20,5 +20,5 @@ const nextConfig = {
 
 // Use withTM until this issue resolves: https://github.com/zeit/next.js/issues/706
 // After that use 'transpileModules' as standard next.config property
-// ['example'] is regexp. This means that every package with name starting with 'example...' is transpiled
-module.exports = withTM({...nextConfig, transpileModules: ['example']})
+// ['example'] is regexp. This means that every package with name starting with 'example-...' is transpiled
+module.exports = withTM({...nextConfig, transpileModules: ['example-']})

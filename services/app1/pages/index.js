@@ -1,3 +1,4 @@
-import Module1 from 'example-module1';
+import React from 'react';
+import { Component } from 'example-module1';
 
-export default () => <div><Module1 /></div>
+export default () => <div><Component /></div>

@@ -11,7 +11,8 @@
     "app1-start": "next start services/app1 -p 4000",
     "app2": "next services/app2 -p 4000",
     "app2-build": "next build services/app2",
-    "app2-start": "next start services/app2 -p 4000"
+    "app2-start": "next start services/app2 -p 4000",
+    "test": "jest"
   },
   "workspaces": [
     "packages/*",
@@ -21,7 +22,11 @@
     "@babel/core": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
     "@babel/preset-react": "^7.0.0-beta.51",
-    "babel-loader": "^7.1.4"
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.0.1",
+    "babel-loader": "^7.1.4",
+    "jest": "^23.1.0",
+    "regenerator-runtime": "^0.11.1"
   },
   "dependencies": {
     "@weco/next-plugin-transpile-modules": "^0.0.2"
