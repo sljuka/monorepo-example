@@ -30,5 +30,10 @@
   },
   "dependencies": {
     "@weco/next-plugin-transpile-modules": "^0.0.2"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!(app1|app2|example-)/)"
+    ]
   }
 }

@@ -5,6 +5,7 @@
   "author": "David Sljukic",
   "license": "MIT",
   "dependencies": {
-    "example-module2": "^1.0.0"
+    "example-module2": "^1.0.0",
+    "react": "^16.4.0"
   }
 }
